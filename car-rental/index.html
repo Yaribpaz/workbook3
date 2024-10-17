@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Car Rental</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+  </head>
+  <body>
+    <main>
+      <article>
+        <h1>ACME Car Rental</h1>
+        <label for="pickupDate">PickUp Date:</label>
+        <input id="pickupDate" type="text" />
+        <label for="numberOfDays">Number of Days:</label>
+        <input id="numberOfDays" type="text" />
+
+        <fieldset>
+          <legend>Options:</legend>
+          <input type="radio" name="options" id="electronicRadio" />
+          <label for="electronicRadio">Electronic Toll Tag ($3.95/day)</label>
+
+          <input type="radio" name="options" id="gpsRadio" />
+          <label for="gpsRadio">GPS ($2.95/day)</label>
+
+          <input type="radio" name="options" id="roadsideRadio" />
+          <label for="roadsideRadio">Roadside Assistance ($2.95/day)</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Under 25?</legend>
+            <input type="radio" name="over21Radio" id="over21RadioYes" />
+            <label for="over21RadioYes">Yes</label>
+            <input type="radio" name="over21Radio" id="over21RadioNo" />
+            <label for="over21RadioNo">No</label>
+          </fieldset>
+
+          <button>Estimate Total Cost</button>
+      </article>
+    </main>
+  </body>
+</html>
