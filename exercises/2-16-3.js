@@ -37,4 +37,4 @@ function getSize(code) {
 console.log(getSize(code1), getSize(code2),getSize(code3));
 
 
-console.log('the (${getSize(code1)}) part ${getProductNumber(code1)}123 is supplied by ${getSupplier(code1)}');
+// console.log('the (${getSize(code1)}) part ${getProductNumber(code1)}123 is supplied by ${getSupplier(code1)}');
