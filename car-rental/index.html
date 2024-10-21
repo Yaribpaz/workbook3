@@ -11,9 +11,9 @@
       <article>
         <h1>ACME Car Rental</h1>
         <label for="pickupDate">PickUp Date:</label>
-        <input id="pickupDate" type="text" />
-        <label for="numberOfDays">Number of Days:</label>
-        <input id="numberOfDays" type="text" />
+        <input id="pickupDate" type="date" />
+        <label for="numberOfDaysInput">Number of Days:</label>
+        <input id="numberOfDaysInput" type="number" />
 
         <fieldset>
           <legend>Options:</legend>
@@ -28,15 +28,27 @@
         </fieldset>
 
         <fieldset>
-            <legend>Under 25?</legend>
-            <input type="radio" name="over21Radio" id="over21RadioYes" />
-            <label for="over21RadioYes">Yes</label>
-            <input type="radio" name="over21Radio" id="over21RadioNo" />
-            <label for="over21RadioNo">No</label>
-          </fieldset>
+          <legend>Under 25?</legend>
+          <input type="radio" name="under25Radio" id="under25RadioYes" />
+          <label for="under25RadioYes">Yes</label>
+          <input type="radio" name="under25Radio" id="under25RadioNo" />
+          <label for="under25RadioNo">No</label>
+        </fieldset>
 
-          <button>Estimate Total Cost</button>
+        <div>
+          <button onclick="estimateTotal()">Estimate Total Cost</button>
+        </div>
+
+        <label for="carRental">Car Rental:</label>
+        <input readonly id="carRental" type="number"/>
+        <label for="options">Options:</label>
+        <input readonly id="options" type="number" />
+        <label for="under25Surcharge">Under 25 surcharge:</label>
+        <input readonly id="under25Surcharge" type="number" />
+        <label for="totalDue">Total Due:</label>
+        <input readonly id="totalDue" type="number" />
       </article>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
