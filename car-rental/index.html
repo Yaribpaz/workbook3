@@ -10,20 +10,20 @@
     <main>
       <article>
         <h1>ACME Car Rental</h1>
-        <label for="pickupDate">PickUp Date:</label>
-        <input id="pickupDate" type="date" />
+        <label for="pickupDateInput">PickUp Date:</label>
+        <input id="pickupDateInput" type="date" />
         <label for="numberOfDaysInput">Number of Days:</label>
         <input id="numberOfDaysInput" type="number" />
 
         <fieldset>
           <legend>Options:</legend>
-          <input type="radio" name="options" id="electronicRadio" />
+          <input type="radio" name="options" id="electronicRadio" value="3.95"/>
           <label for="electronicRadio">Electronic Toll Tag ($3.95/day)</label>
 
-          <input type="radio" name="options" id="gpsRadio" />
+          <input type="radio" name="options" id="gpsRadio" value="2.95"/>
           <label for="gpsRadio">GPS ($2.95/day)</label>
 
-          <input type="radio" name="options" id="roadsideRadio" />
+          <input type="radio" name="options" id="roadsideRadio" value="2.95" />
           <label for="roadsideRadio">Roadside Assistance ($2.95/day)</label>
         </fieldset>
 
@@ -39,14 +39,13 @@
           <button onclick="estimateTotal()">Estimate Total Cost</button>
         </div>
 
-        <label for="carRental">Car Rental:</label>
-        <input readonly id="carRental" type="number"/>
-        <label for="options">Options:</label>
-        <input readonly id="options" type="number" />
-        <label for="under25Surcharge">Under 25 surcharge:</label>
-        <input readonly id="under25Surcharge" type="number" />
-        <label for="totalDue">Total Due:</label>
-        <input readonly id="totalDue" type="number" />
+        <section>
+          <p>Car rental: $<span id="carRentalCostSpan">0.00</span></p>
+          <p>Options: $<span id="optionsCostSpan">0.00</span></p>
+          <p>Under 25 surcharge: $<span id="under25CostSpan">0.00</span></p>
+          <br />
+          <p>Total due: $<span id="totalCostSpan">0.00</span></p>
+        </section>
       </article>
     </main>
     <script src="main.js"></script>
